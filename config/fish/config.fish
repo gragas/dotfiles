@@ -7,6 +7,6 @@ end
 source ~/.aliases
 
 # Setup GOPATH and add GOBIN to PATH
-export GOPATH=~/go/src
-export GOBIN=~/go/bin
+export GOPATH=/home/tom/go
+export GOBIN=$GOPATH/bin
 set PATH $GOBIN $PATH
