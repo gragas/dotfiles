@@ -60,14 +60,16 @@ beautiful.init(os.getenv("HOME") .. "/.config/awesome/themes/steamburn/theme.lua
 -- common
 modkey     = "Mod4"
 altkey     = "Mod1"
-terminal   = "urxvtc" or "xterm"
+terminal   = "urxvt"
 editor     = os.getenv("EDITOR") or "nano" or "vi"
 editor_cmd = terminal .. " -e " .. editor
 
 -- user defined
-browser    = "firefox"
-gui_editor = "gvim"
+browser    = "chromium"
+gui_editor = "emacs"
 graphics   = "gimp"
+drawing    = "inkscape"
+xlock      = "xlock"
 
 -- lain
 lain.layout.termfair.nmaster = 3
@@ -393,10 +395,10 @@ globalkeys = awful.util.table.join(
         end),
 
     -- Show Menu
-    awful.key({ modkey }, "w",
-        function ()
-            mymainmenu:show({ keygrabber = true })
-        end),
+    -- awful.key({ modkey }, "w",
+    --    function ()
+    --        mymainmenu:show({ keygrabber = true })
+    --    end),
 
     -- Show/Hide Wibox
     -- awful.key({ modkey }, "b", function ()
@@ -487,10 +489,11 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey }, "c", function () os.execute("xsel -p -o | xsel -i -b") end),
 
     -- User programs
-    awful.key({ modkey }, "q", function () awful.util.spawn(browser) end),
-    awful.key({ modkey }, "i", function () awful.util.spawn(browser2) end),
-    awful.key({ modkey }, "s", function () awful.util.spawn(gui_editor) end),
+    awful.key({ modkey }, "w", function () awful.util.spawn(browser) end),
+    awful.key({ modkey }, "e", function () awful.util.spawn(gui_editor) end),
     awful.key({ modkey }, "g", function () awful.util.spawn(graphics) end),
+    awful.key({ modkey }, "i", function () awful.util.spawn(drawing) end),
+    awful.key({ modkey }, "l", function () awful.util.spawn(xlock) end),
 
     -- Prompt
     awful.key({ modkey }, "r", function () mypromptbox[mouse.screen]:run() end),
