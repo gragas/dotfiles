@@ -30,6 +30,7 @@
 
 ;; load all my packages
 (setq tom-packages '(tom-go
+		     tom-google
 		     tom-theme))
 (dolist (file tom-packages)
   (require file))
