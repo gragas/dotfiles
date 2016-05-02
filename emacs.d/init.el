@@ -29,7 +29,8 @@
     (package-install pkg)))
 
 ;; load all my packages
-(setq tom-packages '(tom-go
+(setq tom-packages '(tom-bindings
+		     tom-go
 		     tom-google
 		     tom-theme))
 (dolist (file tom-packages)
