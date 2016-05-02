@@ -56,4 +56,7 @@ synclient TapButton1=0
 synclient TapButton2=0
 synclient TapButton3=0
 
+# unmute all audio channels
+amixer sset Master unmute
+
 exec awesome
