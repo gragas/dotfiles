@@ -1,6 +1,17 @@
 # Fix fish in Emacs term
 function fish_title
-  true
+	true
+end
+
+# Remove greeting
+set fish_greeting
+
+# Change prompt
+function fish_prompt
+	set_color $fish_color_cwd
+	echo -n (prompt_pwd)
+	set_color normal
+	echo -n ' λ '
 end
 
 # Add aliases
