@@ -343,9 +343,9 @@ root.buttons(awful.util.table.join(
 globalkeys = awful.util.table.join(
     -- Brightness
     awful.key({ }, "XF86MonBrightnessDown", function ()
-        awful.util.spawn("xbacklight -dec 15") end),
+        awful.util.spawn("xbacklight -dec 5") end),
     awful.key({ }, "XF86MonBrightnessUp", function ()
-        awful.util.spawn("xbacklight -inc 15") end),
+        awful.util.spawn("xbacklight -inc 5") end),
 
     -- Take a screenshot
     -- https://github.com/copycat-killer/dots/blob/master/bin/screenshot
