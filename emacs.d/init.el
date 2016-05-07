@@ -32,6 +32,7 @@
 (setq tom-packages '(tom-bindings
 		     tom-go
 		     tom-google
+		     tom-lua
 		     tom-theme))
 (dolist (file tom-packages)
   (require file))
