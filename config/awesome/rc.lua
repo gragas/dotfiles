@@ -113,29 +113,29 @@ markup = lain.util.markup
 gray   = "#94928F"
 
 -- Textclock
-mytextclock = awful.widget.textclock(" %H:%M ")
+mytextclock = awful.widget.textclock(" | %H:%M %Z | %A %B %d, %Y ")
 
 -- Calendar
 lain.widgets.calendar:attach(mytextclock)
 
 -- Mail IMAP check
-mailwidget = lain.widgets.imap({
-    timeout  = 180,
-    server   = "server",
-    mail     = "mail",
-    password = "keyring get mail",
-    settings = function()
-        mail  = ""
-        count = ""
-
-        if mailcount > 0 then
-            mail = "Mail "
-            count = mailcount .. " "
-        end
-
-        widget:set_markup(markup(gray, mail) .. count)
-    end
-})
+-- mailwidget = lain.widgets.imap({
+--     timeout  = 180,
+--     server   = "server",
+--     mail     = "mail",
+--     password = "keyring get mail",
+--     settings = function()
+--         mail  = ""
+--         count = ""
+-- 
+--         if mailcount > 0 then
+--             mail = "Mail "
+--             count = mailcount .. " "
+--         end
+-- 
+--         widget:set_markup(markup(gray, mail) .. count)
+--     end
+-- })
 
 -- MPD
 mpdwidget = lain.widgets.mpd({
@@ -196,7 +196,7 @@ netwidget = lain.widgets.net({
 volumewidget = lain.widgets.alsa({
     settings = function()
         header = " Vol "
-        vlevel  = volume_now.level
+        vlevel = volume_now.level
 
         if volume_now.status == "off" then
             vlevel = vlevel .. "M "
@@ -209,9 +209,18 @@ volumewidget = lain.widgets.alsa({
 })
 
 -- Weather
--- myweather = lain.widgets.weather({
---    city_id = 123456 -- placeholder
--- })
+-- weatherwidget = lain.widgets.weather({
+--   settings = function()
+--       city_id = 4914570 -- Urbana, IL
+--       text    = weather.notification_text
+--       if text == "N/A" then
+--	  weather.update()
+--	  weather.forcast_update()
+--	  text = weather.notification_text
+--       end
+--       widget:set_markup(markup(gray, " Urbana, IL ") .. weather.notification_text .. " ")
+--   end
+--})
 
 -- Separators
 first = wibox.widget.textbox(markup.font("Tamsyn 4", " "))
@@ -314,9 +323,10 @@ for s = 1, screen.count() do
     right_layout:add(spr)
     right_layout:add(mpdwidget)
     --right_layout:add(mailwidget)
-    right_layout:add(cpuwidget)
-    right_layout:add(memwidget)
-    right_layout:add(batwidget)
+    --right_layout:add(cpuwidget)
+    --right_layout:add(memwidget)
+    --right_layout:add(batwidget)
+    --right_layout:add(weatherwidget)
     right_layout:add(netwidget)
     right_layout:add(volumewidget)
     right_layout:add(mytextclock)
@@ -437,7 +447,7 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey,	          }, "z",      function () drop(terminal) end),
 
     -- Widgets popups
-    awful.key({ altkey,           }, "c",      function () lain.widgets.calendar:show(7) end),
+    -- awful.key({ altkey,           }, "c",      function () lain.widgets.calendar:show(7) end),
     awful.key({ altkey,           }, "h",      function () fshomeupd.show(7) end),
     -- awful.key({ altkey,           }, "w",      function () myweather.show(7) end),
 
