@@ -113,7 +113,7 @@ markup = lain.util.markup
 gray   = "#94928F"
 
 -- Textclock
-mytextclock = awful.widget.textclock(" | %H:%M %Z | %A %B %d, %Y ")
+mytextclock = awful.widget.textclock(" [%A %B %d, %Y %H:%M]")
 
 -- Calendar
 lain.widgets.calendar:attach(mytextclock)
@@ -188,7 +188,7 @@ netwidget = lain.widgets.net({
     settings = function()
         if net_now.state == "up" then net_state = "On"
         else net_state = "Off" end
-        widget:set_markup(markup(gray, " Net ") .. net_state .. " ")
+        widget:set_markup(markup(gray, " Net ") .. net_state)
     end
 })
 
@@ -199,9 +199,9 @@ volumewidget = lain.widgets.alsa({
         vlevel = volume_now.level
 
         if volume_now.status == "off" then
-            vlevel = vlevel .. "M "
+            vlevel = vlevel .. "M"
         else
-            vlevel = vlevel .. " "
+            vlevel = vlevel
         end
 
         widget:set_markup(markup(gray, header) .. vlevel)
