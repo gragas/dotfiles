@@ -13,4 +13,7 @@
 ;; font
 (set-default-font "Roboto Mono-10")
 
+;; line numbers
+(global-linum-mode 1)
+
 (provide 'tom-theme)

@@ -32,8 +32,10 @@
 (setq tom-packages '(tom-bindings
 		     tom-go
 		     tom-google
+		     tom-haskell
 		     tom-lua
-		     tom-theme))
+		     tom-theme
+		     tom-web))
 (dolist (file tom-packages)
   (require file))
 
@@ -41,7 +43,7 @@
 (delete-selection-mode)
 
 ;; macros
-(fset 'fish
-   (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([24 51 24 111 134217848 116 101 114 109 return return 12] 0 "%d")) arg)))
 (fset 'init-file
-   (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([24 6 67108896 1 backspace 126 47 46 101 109 97 99 115 46 100 47 105 110 105 116 46 101 108 return] 0 "%d")) arg)))
+   (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([24 6 67108896 1 backspace 126 47 100 111 116 102 105 108 101 115 46 backspace 47 101 109 97 99 115 46 100 47 105 110 105 116 46 101 108 return] 0 "%d")) arg)))
+(fset 'golang
+   (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([24 6 67108896 1 backspace 126 47 103 111 47 115 114 99 47 103 105 116 104 117 98 46 99 111 109 47 103 114 97 103 97 115 47 return] 0 "%d")) arg)))
