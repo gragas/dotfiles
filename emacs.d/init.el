@@ -30,12 +30,12 @@
 
 ;; load all my packages
 (setq tom-packages '(tom-bindings
+		     tom-clojure
 		     tom-go
 		     tom-google
 		     tom-haskell
 		     tom-lua
-		     tom-theme
-		     tom-web))
+		     tom-theme))
 (dolist (file tom-packages)
   (require file))
 
