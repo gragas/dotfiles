@@ -24,3 +24,7 @@ set PATH $PATH "/usr/local/bin"
 export GOPATH=/home/tom/go
 export GOBIN=$GOPATH/bin
 set PATH $PATH $GOBIN
+
+# Setup RUBYBIN and add it to PATH
+export RUBYBIN=/home/tom/.gem/ruby/2.3.0/bin
+set PATH $PATH $RUBYBIN
