@@ -35,6 +35,7 @@
 		     tom-google
 		     tom-haskell
 		     tom-lua
+		     tom-rss
 		     tom-theme))
 (dolist (file tom-packages)
   (require file))
