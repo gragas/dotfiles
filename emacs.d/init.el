@@ -31,6 +31,7 @@
 ;; load all my packages
 (setq tom-packages '(tom-bindings
 		     tom-clojure
+		     tom-neotree
 		     tom-go
 		     tom-google
 		     tom-haskell

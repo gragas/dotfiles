@@ -7,8 +7,8 @@
 (setq ring-bell-function 'ignore)
 
 ;; theme
-(package-require 'solarized-theme)
-(load-theme 'solarized-dark t)
+(package-require 'twilight-bright-theme)
+(load-theme 'twilight-bright t)
 
 ;; font
 (set-default-font "Roboto Mono-10")
