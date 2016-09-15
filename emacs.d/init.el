@@ -30,6 +30,7 @@
 
 ;; load all my packages
 (setq tom-packages '(tom-bindings
+		     tom-css
 		     tom-clojure
 		     tom-neotree
 		     tom-go
@@ -37,7 +38,8 @@
 		     tom-haskell
 		     tom-lua
 		     tom-rss
-		     tom-theme))
+		     tom-theme
+		     tom-web))
 (dolist (file tom-packages)
   (require file))
 
