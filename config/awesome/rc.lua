@@ -38,6 +38,34 @@ do
 end
 -- }}}
 
+
+-- {{{ Attempt to randomize wallpaper
+-- configuration - edit to your liking
+wp_index = 1
+wp_timeout  = 10
+wp_path = "/home/tom/dotfiles/wallpapers/"
+wp_files = {}
+ls = io.popen('ls ' .. wp_path)
+for filename in ls:lines() do table.insert(wp_files, filename) end
+ -- setup the timer
+wp_timer = timer { timeout = wp_timeout }
+wp_timer:connect_signal("timeout", function()
+  for s = 1, screen.count() do
+    gears.wallpaper.maximized(wp_path .. wp_files[wp_index], s, true)
+  end
+   -- stop the timer (we don't need multiple instances running at the same time)
+  wp_timer:stop()
+   -- get next random index
+  wp_index = math.random( 1, #wp_files)
+   --restart the timer
+  wp_timer.timeout = wp_timeout
+  wp_timer:start()
+end)
+ -- initial start when rc.lua is first run
+wp_timer:start()
+-- }}}
+
+
 -- {{{ Autostart applications
 function run_once(cmd)
   findme = cmd
@@ -92,14 +120,6 @@ tags = {
 }
 for s = 1, screen.count() do
    tags[s] = awful.tag(tags.names, s, tags.layout)
-end
--- }}}
-
--- {{{ Wallpaper
-if beautiful.wallpaper then
-    for s = 1, screen.count() do
-        gears.wallpaper.maximized(beautiful.wallpaper, s, true)
-    end
 end
 -- }}}
 
