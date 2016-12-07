@@ -39,7 +39,8 @@
 		     tom-lua
 		     tom-rss
 		     tom-theme
-		     tom-web))
+		     tom-web
+		     tom-wiki))
 (dolist (file tom-packages)
   (require file))
 
