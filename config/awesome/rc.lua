@@ -41,17 +41,17 @@ end
 
 -- {{{ Attempt to randomize wallpaper
 -- configuration - edit to your liking
-wp_index = 1
-wp_timeout  = 10
+wp_timeout = 10
 wp_path = "/home/tom/dotfiles/wallpapers/"
 wp_files = {}
 ls = io.popen('ls ' .. wp_path)
 for filename in ls:lines() do table.insert(wp_files, filename) end
+wp_index = math.random( 1, #wp_files)
  -- setup the timer
 wp_timer = timer { timeout = wp_timeout }
 wp_timer:connect_signal("timeout", function()
   for s = 1, screen.count() do
-    gears.wallpaper.maximized(wp_path .. wp_files[wp_index], s, true)
+    gears.wallpaper.fit(wp_path .. wp_files[wp_index], s)
   end
    -- stop the timer (we don't need multiple instances running at the same time)
   wp_timer:stop()
