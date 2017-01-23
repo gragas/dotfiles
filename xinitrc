@@ -59,4 +59,4 @@ synclient TapButton3=0
 # unmute all audio channels
 amixer sset Master unmute
 
-exec awesome
+exec i3
