@@ -59,4 +59,6 @@ synclient TapButton3=0
 # unmute all audio channels
 amixer sset Master unmute
 
+export PATH=$PATH:/home/tom/.i3/bin
+
 exec i3

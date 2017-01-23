@@ -1,0 +1,6 @@
+#!/bin/sh
+
+papes_dir="/home/tom/.papes"
+
+background=$(ls $papes_dir | sort -R | head -n1)
+i3lock -i $papes_dir/$background -f -c "#000000"
