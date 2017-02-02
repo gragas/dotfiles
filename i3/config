@@ -14,6 +14,9 @@ bindsym Mod4+Return exec i3-sensible-terminal
 bindsym Mod4+e exec emacs
 bindsym Mod4+w exec chromium
 
+# toggle split orientation
+bindsym Mod4+t layout toggle split
+
 # change focus
 bindsym Mod4+$left focus left
 bindsym Mod4+$down focus down
