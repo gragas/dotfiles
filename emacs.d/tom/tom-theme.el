@@ -11,7 +11,7 @@
 (load-theme 'twilight-bright t)
 
 ;; font
-(set-default-font "Roboto Mono-10")
+(set-default-font "PT Mono-8")
 
 ;; line numbers
 (global-linum-mode 1)

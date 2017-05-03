@@ -51,7 +51,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (yaml-mode web-mode twilight-bright-theme solarized-theme rust-mode neotree lua-mode haskell-mode google-this go-mode fish-mode ess elfeed clojure-mode))))
+    (avy yaml-mode web-mode twilight-bright-theme solarized-theme rust-mode neotree lua-mode haskell-mode google-this go-mode fish-mode ess elfeed clojure-mode))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
