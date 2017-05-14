@@ -1,5 +1,6 @@
 (package-require 'avy)
-(global-set-key (kbd "C-:") 'avy-goto-char)
+(global-unset-key (kbd "C-_"))
+(global-set-key (kbd "C-_") 'avy-goto-char)
 (setq ns-function-modifier 'control)
 (setq ns-command-modifier 'meta)
 (global-set-key (kbd "C-c C-e") 'eval-defun)

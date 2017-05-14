@@ -7,11 +7,13 @@
 (setq ring-bell-function 'ignore)
 
 ;; theme
-(package-require 'twilight-bright-theme)
-(load-theme 'twilight-bright t)
+;;(package-require 'twilight-bright-theme)
+;;(load-theme 'twilight-bright t)
+(package-require 'afternoon-theme)
+(load-theme 'afternoon t)
 
 ;; font
-(set-default-font "PT Mono-8")
+(set-default-font "Ubuntu Mono-12")
 
 ;; line numbers
 (global-linum-mode 1)
