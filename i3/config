@@ -13,6 +13,7 @@ set $right f
 bindsym Mod4+Return exec i3-sensible-terminal
 bindsym Mod4+e exec emacs
 bindsym Mod4+w exec chromium
+bindsym Mod4+g exec gimp
 
 # toggle split orientation
 bindsym Mod4+t layout toggle split
