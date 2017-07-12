@@ -36,4 +36,8 @@
 (global-set-key (kbd "M-j") 'prev-space)
 (global-unset-key (kbd "C-]"))
 (global-set-key (kbd "C-]") 'replace-string)
+
+(fset 'main-cpp
+   (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([35 105 110 99 108 117 101 backspace 100 101 32 60 105 111 115 116 114 101 97 109 62 return return 105 110 116 32 109 97 105 110 40 41 33554464 123 return return 125 16 tab] 0 "%d")) arg)))
+
 (provide 'tom-bindings)
