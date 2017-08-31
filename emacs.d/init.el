@@ -32,8 +32,10 @@
 (setq tom-packages '(tom-bindings
 		     tom-css
 		     tom-clojure
+		     tom-deft
 		     tom-go
 		     tom-haskell
+		     tom-indentation
 		     tom-lua
 		     tom-markdown
 		     tom-rss
@@ -52,7 +54,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (afternoon-theme markdown-mode avy yaml-mode web-mode twilight-bright-theme solarized-theme rust-mode neotree lua-mode haskell-mode google-this go-mode fish-mode ess elfeed clojure-mode))))
+    (deft afternoon-theme markdown-mode avy yaml-mode web-mode twilight-bright-theme solarized-theme rust-mode neotree lua-mode haskell-mode google-this go-mode fish-mode ess elfeed clojure-mode))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
