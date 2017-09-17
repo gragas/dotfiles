@@ -33,6 +33,7 @@
 		     tom-css
 		     tom-clojure
 		     tom-deft
+		     tom-graphviz
 		     tom-go
 		     tom-haskell
 		     tom-indentation
@@ -54,7 +55,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (deft afternoon-theme markdown-mode avy yaml-mode web-mode twilight-bright-theme solarized-theme rust-mode neotree lua-mode haskell-mode google-this go-mode fish-mode ess elfeed clojure-mode))))
+    (graphviz-dot-mode deft afternoon-theme markdown-mode avy yaml-mode web-mode twilight-bright-theme solarized-theme rust-mode neotree lua-mode haskell-mode google-this go-mode fish-mode ess elfeed clojure-mode))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
