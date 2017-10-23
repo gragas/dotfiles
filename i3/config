@@ -14,9 +14,10 @@ bindsym Mod4+Return exec i3-sensible-terminal
 bindsym Mod4+e exec emacs
 bindsym Mod4+w exec chromium
 bindsym Mod4+g exec gimp
+bindsym Mod4+r exec dmenu_run
 
 # toggle split orientation
-bindsym Mod4+t layout toggle split
+# bindsym Mod4+t layout toggle split
 
 # change focus
 bindsym Mod4+$left focus left
@@ -61,7 +62,7 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 5
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym Mod4+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym Mod4+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+bindsym Mod4+Shift+q exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 # lock i3
 bindsym Mod4+Shift+l exec "i3lock_random_background"
 
@@ -89,7 +90,7 @@ mode "resize" {
         bindsym Escape mode "default"
 }
 
-bindsym Mod4+r mode "resize"
+bindsym Mod4+t mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
