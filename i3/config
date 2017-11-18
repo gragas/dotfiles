@@ -11,8 +11,8 @@ set $right f
 
 # start programs
 bindsym Mod4+Return exec i3-sensible-terminal
-bindsym Mod4+e exec emacs
-bindsym Mod4+w exec chromium
+bindsym Mod4+e exec SHELL=/usr/bin/bash emacsclient -c
+bindsym Mod4+w exec firefox-developer
 bindsym Mod4+g exec gimp
 bindsym Mod4+r exec dmenu_run
 
