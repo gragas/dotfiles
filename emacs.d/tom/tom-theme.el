@@ -13,7 +13,7 @@
 (load-theme 'afternoon t)
 
 ;; font
-(set-default-font "Ubuntu Mono-12")
+(setq default-frame-alist '((font . "Ubuntu Mono-12")))
 
 ;; line numbers
 (global-linum-mode 1)
