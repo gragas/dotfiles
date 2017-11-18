@@ -1,6 +1,17 @@
-# Emacs autosave files
-*~
-
-# huh...
+.ipynb_checkpoints
+config/configstore
 config/chromium
+config/dconf
+config/fish/fish_history
+config/fish/fishd.*
+config/google-chrome
 config/gconf
+config/gtk-2.0
+config/htop
+config/inkscape
+config/menus
+config/mimeapps.list
+config/pavucontrol.ini
+config/pulse
+config/transmission
+config/vlc
