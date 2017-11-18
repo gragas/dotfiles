@@ -1,8 +1,8 @@
-#!/bin/sh
+#!/usr/bin/sh
+
+set -eo pipefail
 
 set -x
-
-cd $HOME
 
 mv_exists() {
     if [ -f $1 ]; then
@@ -15,10 +15,17 @@ install_dotfile() {
     ln -s $HOME/dotfiles/$1 $HOME/.$1
 }
 
-install_dotfile "Xmodmap"
-install_dotfile "Xresources"
-install_dotfile "aliases"
-install_dotfile "xinitrc"
-install_dotfile "i3"
-install_dotfile "emacs.d"
-install_dotfile "config"
+DOTFILES=(
+    "aliases"
+    "config"
+    "emacs.d"
+    "gitignore_global"
+    "i3"
+    "xinitrc"
+    "Xmodmap"
+    "Xresources"
+)
+
+for dotfile in ${DOTFILES[@]}; do
+    install_dotfile $dotfile
+done
