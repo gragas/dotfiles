@@ -13,7 +13,9 @@
 (load-theme 'afternoon t)
 
 ;; font
-(setq default-frame-alist '((font . "Ubuntu Mono-12")))
+(setq default-frame-alist '((font . "Ubuntu Mono-12")
+                            (vertical-scroll-bars . nil)
+                            (horizontal-scroll-bars . nil)))
 
 ;; line numbers
 (global-linum-mode 1)
